@@ -44,7 +44,7 @@
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
 (global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
 
-(global-set-key (kbd "M-O") 'rotate-windows)
+;;(global-set-key (kbd "M-O") 'rotate-windows)
 
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
@@ -61,6 +61,21 @@
 (global-set-key [(control z)] 'repeat) ; was suspend-frame
 
 ;; Window navigation
+;; Songnon
+;; http://www.emacswiki.org/emacs/PuTTY
+(define-key input-decode-map "\e\eOA" [(meta up)])
+(define-key input-decode-map "\e\eOB" [(meta down)])
+(define-key input-decode-map "\e\eOC" [(meta right)])
+(define-key input-decode-map "\e\eOD" [(meta left)])
+;; for elpy navigate
+(define-key input-decode-map "\e[D" [(control left)])
+(define-key input-decode-map "\e[C" [(control right)])
+(define-key input-decode-map "\e[A" [(control up)])
+(define-key input-decode-map "\e[B" [(control down)])
+;; elpy
+;;(global-set-key (kbd "S-<up>") 'elpy-nav-move-line-or-region-up)
+
+;; end
 (windmove-default-keybindings 'meta)
 
 ;; Mac OS X conventions
@@ -98,7 +113,13 @@
 (global-set-key (kbd "s-\\") 'fixup-whitespace)
 
 ;; Help teach to unlearn the arrow keys
-(global-unset-key (kbd "<left>"))
-(global-unset-key (kbd "<right>"))
-(global-unset-key (kbd "<up>"))
-(global-unset-key (kbd "<down>"))
+;; Songnon
+;;(global-unset-key (kbd "<left>"))
+;;(global-unset-key (kbd "<right>"))
+;;(global-unset-key (kbd "<up>"))
+;;(global-unset-key (kbd "<down>"))
+
+;;(global-set-key (kbd "\eOA") 'previous-line)
+;;(global-set-key (kbd "\eOB") 'next-line)
+;;(global-set-key (kbd "\eOD") 'backward-char)
+;;(global-set-key (kbd "\eOC") 'forward-char)

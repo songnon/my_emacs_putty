@@ -1,8 +1,8 @@
 ;;; Generic emacs settings I cannot live without
 
 ;; Use command as the meta key; option key as super
-(setq ns-command-modifier 'meta)
-(setq ns-option-modifier  'super)
+;;(setq ns-command-modifier 'meta)
+;;(setq ns-option-modifier  'super)
 
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)

@@ -73,6 +73,8 @@
 (package 'textile-mode)
 (package 'yaml-mode)
 (package 'yasnippet)
+;; Songnon
+(package 'elpy)
 
 ;; submodule managed
 ;; ------------------
